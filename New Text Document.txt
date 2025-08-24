@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(){
+ int arr[]={11,1,8,4,6};
+int  size=sizeof(arr).sizeof(arr[0]);
+
+printf("Orignal Array :");
+for(int i=0;i<n;i++){
+	printf("%d",arr[i]);
+}
+return 0;
+}
