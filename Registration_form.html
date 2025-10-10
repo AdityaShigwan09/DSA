@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>   
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            background-color: lightskyblue;
+           position:relative;
+           max-width: 700px;
+           margin:50px auto;
+           padding: 20px;
+           border-radius: 10px;
+           box-shadow: 0px 0px 58px rgba(226, 221, 221, 0.411);
+           transition: .5s;
+        }
+        .container h1,h3{
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        .main-form-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            gap: 20px;
+        }
+
+        .left-form-container {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-form-container {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #000000;
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .radio-option input {
+            margin: 0;
+        }
+        
+        .radio-option label {
+            margin: 0;
+            font-weight: normal;
+        }
+        
+        .submit-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 12px 30px;
+            background-color:green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Registration Form</h1>
+    <h3>Fill Your Details</h3>
+
+    <form id="regForm">
+        <div class="main-form-container">
+            <div class="left-form-container">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="rollno">Roll No</label>
+                    <input type="text" name="rollno" id="rollno" placeholder="Enter your roll no">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <select name="course" id="course">
+                        <option value="">Select your Course</option>
+                        <option value="msc1">MSc (CS) 1st year</option>
+                        <option value="msc2">MSc (CS) 2nd year</option>
+                    </select>
+                </div>
+            </div> 
+
+            <div class="right-form-container">
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="gender" id="other" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                </div>
+            
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+            </div>
+        </div>
+        
+        <div class="submit-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("regForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // prevent actual form submission
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const rollno = document.getElementById("rollno").value.trim();
+        const course = document.getElementById("course").value;
+        const phone = document.getElementById("phone").value.trim();
+        const dob = document.getElementById("dob").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (name === "" || email === "" || rollno === "" || course === "" || phone === "" || dob === "") {
+            alert("Please fill all fields.");
+            return;
+        }
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+        }
+
+        if (!gender) {
+            alert("Please select your gender.");
+            return;
+        }
+
+        alert("Form submitted successfully!");
+        form.reset();
+    });
+});
+</script>
+</body>
+</html>
