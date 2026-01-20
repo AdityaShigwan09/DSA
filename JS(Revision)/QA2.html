@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name"><br>
+    <label for="">ID</label>
+    <input type="text" id="id"><br>
+    <label for="">Salary</label>
+    <input type="text" id="sal">
+    <button type="button" onclick="Accept()">Submiit</button>
+    <Script>
+
+        function Accept(){
+            var id1=document.getElementById("id").value;
+            var name1=document.getElementById("name").value;
+            var sal1=document.getElementById("sal").value;
+
+            const obj1={id:id1,name:name1,sal:sal1}; 
+
+            console.log({
+                id:obj1.id,
+                name:obj1.name,
+                sal1:obj1.sal,
+                tax:(10*sal1)/100
+            });
+        }
+        
+    </Script>
+</body>
+</html>

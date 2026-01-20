@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players Table</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+
+            // Highlight ODD rows (1st, 3rd, 5th...) → yellow
+            $("tr:odd").css({"background-color":"yellow"});
+
+            // Highlight EVEN rows (2nd, 4th, 6th...) → orange
+            $("tr:even").css({"background-color": "orange"});
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <h2>Players List</h2>
+
+    <table>
+        <tr>
+            <th>Player Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+
+        <tr>
+            <td>Rohit Sharma</td>
+            <td>36</td>
+            <td>rohit@example.com</td>
+        </tr>
+
+        <tr>
+            <td>Virat Kohli</td>
+            <td>35</td>
+            <td>virat@example.com</td>
+        </tr>
+
+        <tr>
+            <td>MS Dhoni</td>
+            <td>42</td>
+            <td>dhoni@example.com</td>
+        </tr>
+
+        <tr>
+            <td>Hardik Pandya</td>
+            <td>30</td>
+            <td>hardik@example.com</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

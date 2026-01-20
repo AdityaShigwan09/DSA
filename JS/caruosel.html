@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Link states (LVHA rule: link → visited → hover → active) */
+a:link {
+    color:pink;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: orange;
+}
+
+/* Focus for input */
+input:focus {
+    border: 2px solid green;
+    background-color: #e9ffe9;
+    outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<h3>CSS Pseudo-Class Example</h3>
+
+<a href="https://example.com">Click Me</a>
+
+<br><br>
+
+<input type="text" placeholder="Focus here to see effect">
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid black;">
+
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.fillRect(10,10,95,50);
+ctx.fillStyle="red";
+ctx.font="20px Time New Roman";
+ctx.fillText("Hello World",10,90);
+ctx.beginPath();
+ctx.arc(250,250,100,0,2*Math.PI);
+ctx.arc(250,250,50,0,2*Math.PI);
+ctx.stroke();
+</script>
+
+</body>
+</html>
