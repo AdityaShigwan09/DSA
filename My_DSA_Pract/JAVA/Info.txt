@@ -1,0 +1,119 @@
+Day 1 : (Date - 21 Jan 2026)
+--------------------------------------------------------------------------------------------------------
+What is Java ? (James Goshlins)(deveploped by sun microsystem in 1995)
+-> Java is a high-level, object-oriented programming language used to develop desktop applications, 
+web applications, and enterprise-level systems.
+
+-> Java is platform independent, but the JVM is platform dependent
+
+What is JDK ?
+-> Java Development Kit (tools + compiler)
+provides the tools, libraries, and runtime environment necessary to write, compile, debug, and 
+run Java applications.
+
+What is JRE ?
+-> Java Runtime Environment (libraries + JVM)
+The JRE provides the core libraries and the Java Virtual Machine (JVM) needed to execute Java programs
+
+What is JVM ?
+-> Java Virtual Machine (runs bytecode)
+It is An abstract computing machine that enables Java programs to run on any device or operating system
+
+It is the core component of the Java Runtime Environment (JRE) responsible for executing Java bytecode
+
+JVM provides memory management, security, and garbage collection.
+
+
+“JDK contains JRE, and JRE contains JVM.”
+
+Why main is Static ?
+->JVM can call it without creating an object
+
+Difference between JDK and JRE?
+-> JDK is used for development, while JRE is used for running Java applications.
+
+
+Data Types
+
+Primitive Datatype-
+1 int 
+2 float
+3 double
+5 char
+6 long  
+7 boolean
+
+
+---------------------------------------------------------------------------------------------------------
+
+What is JVM
+JVM Stands for Java Virtual Machine its used to execute the bytecode or run the java applications
+or.class file on any os
+
+Difference between JDK and JRE?
+JDK is used for development, while JRE is used for running Java applications.
+JDK
+it Stand for Java Development Kit
+it Development tool kit for java developers
+it contains JRE and JVM
+it provides to write compile and debug the code
+JRE
+it Stands for Java Runtime Environment
+it Provides core libraries of java and JMV
+
+Why Java is platform independent?
+ Because java code compile in any os but the catch is that Java is platform independent
+ but the jvm is platform dependent we need Different jvm according to Different os
+
+
+What happens after writing .java file?
+We compile the .java file using the cmd javac File_name.java
+the next step is after writing code is compiling 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Day 2 : (Date - 22 Jan 2026)
+
+Operators in Java
+
+1 Arithmatic Operators
+    +   -   *   /   %
+
+2 Relational / Conditional Operators
+    >  <  >=  <=  ==  !=
+
+3 Logical Operators
+    &&   ||   !
+
+
+Control Statements
+
+1 if–else
+    If 'if' block Expression / Condition is True then it execute the 'if' block
+    IF 'if' block Expression / Condition is false then it execute the 'else' block
+
+2 else-if ladder
+    More than one 'if' is need in the program we use use 'else if' ladder 
+    If 'if' block Expression / Condition is false then it execute the 'else if' block (if it exist in the program)
+
+3 switch
+    Switch case is used when we have multiple conditions to check for the same variable. 
+
+
+
+Loops
+
+while Loop
+    The while loop that executes a block of code repeatedly as long as the given condition is true.
+
+do while loop
+    The do-while loop that executes a block of code at least once, and then continues 
+    execution as long as the condition is true.
+
+for Loop
+    The for loop is an entry-controlled loop used when the number of iterations is known in advance.
+
+
+
+
+
