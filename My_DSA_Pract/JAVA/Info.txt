@@ -157,7 +157,7 @@ Day 4 : (Date - 24 Jan 2026)
 | `extends`    | Inheritance              |
 | `implements` | Interface implementation |
 
-
+---------------------------------------------------------------------------------------------------------
 
 2.What is an Object?
 ->  An object is a real-world entity created from a class.
@@ -203,7 +203,7 @@ Day 4 : (Date - 24 Jan 2026)
 WHAT HAPPENS IF OBJECT = NULL?
 
 Student s1 = null;
-s1.study();  // ❌ NullPointerException
+s1.study();  // Exception : NullPointerException
 
 
 *Key Points
@@ -212,6 +212,37 @@ s1.study();  // ❌ NullPointerException
     Multiple objects can be created from one class
     Each object has its own copy of instance variables
     Garbage Collector removes unused objects
+
+---------------------------------------------------------------------------------------------------------
+
+3.What is a Constructor in Java?
+
+->  A constructor is a special block of code that runs automatically when an object is created.
+Its main job is to initialize the object’s data.
+
+    eg-
+    Student s1 = new Student(); // Constructor runs here
+
+    As soon as new Student() happens → constructor executes
+
+
+* RULE OF CONSTRUCTOR
+
+| Rule                 | Explanation                      |
+| -------------------- | -------------------------------- |
+|   Same name as class | `Student()` inside class Student |
+|   No return type     | Not even `void`                  |
+|   Runs automatically | When object is created           |
+|   Can be overloaded  | Multiple constructors allowed    |
+
+
+Types of Constructor-
+-> default Constructor
+
+-> parameterized Constructor
+
+-> copy constructor -A copy constructor in Java is a constructor that initializes
+ a new object using another object of the same class.
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
