@@ -114,6 +114,104 @@ for Loop
     The for loop is an entry-controlled loop used when the number of iterations is known in advance.
 
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Day 3 : (Date - 23 Jan 2026)
+
+Method + Problem Solving Skill
 
 
+1 What is Method in Java ?
+-> A method is a block of code that performs a specific task and can be reused whenever needed.
+
+
+2 Why we use methods?
+->
+    Code reusability
+    Cleaner programs
+    Easier debugging
+    Modular programming
+
+3.Why methods are static here?
+-> Because main is static, so it can only call static methods directly.
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Day 4 : (Date - 24 Jan 2026)
+
+1.What is a Class?
+->  A class is a blueprint/template used to create objects.
+
+
+*MPORTANT CLASS-RELATED KEYWORDS
+
+| Keyword      | Use                      |
+| ------------ | ------------------------ |
+| `class`      | Define a class           |
+| `new`        | Create object            |
+| `this`       | Current object reference |
+| `static`     | Belongs to class         |
+| `final`      | Cannot change / inherit  |
+| `abstract`   | Incomplete class         |
+| `extends`    | Inheritance              |
+| `implements` | Interface implementation |
+
+
+
+2.What is an Object?
+->  An object is a real-world entity created from a class.
+
+
+* OBJECT HAS 3 MAIN THINGS
+
+| Term         | Meaning                    |
+| ------------ | -------------------------- |
+| **State**    | Data (variables)           |
+| **Behavior** | Methods (functions)        |
+| **Identity** | Unique reference in memory |
+
+
+
+* MEMORY CONCEPT (IMPORTANT)
+
+| Memory Area | Stores                    |
+| ----------- | ------------------------- |
+| **Heap**    | Actual object             |
+| **Stack**   | Object reference variable |
+
+
+
+* TYPES OF OBJECTS IN JAVA
+| Type                 | Meaning                      |
+| -------------------- | ---------------------------- |
+| **Real Object**      | Created using `new` keyword  |
+| **Anonymous Object** | Object without reference     |
+| **Reference Object** | Holds address of real object |
+
+
+* IMPORTANT OBJECT KEYWORDS
+
+| Keyword   | Use                      |
+| --------- | ------------------------ |
+| `new`     | Creates object           |
+| `this`    | Refers to current object |
+| `null`    | No object reference      |
+| `clone()` | Copy object              |
+
+
+WHAT HAPPENS IF OBJECT = NULL?
+
+Student s1 = null;
+s1.study();  // ❌ NullPointerException
+
+
+*Key Points
+    Objects are stored in heap memory
+    Reference variables are stored in stack
+    Multiple objects can be created from one class
+    Each object has its own copy of instance variables
+    Garbage Collector removes unused objects
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
