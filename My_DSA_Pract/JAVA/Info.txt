@@ -246,3 +246,101 @@ Types of Constructor-
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+Day 5 : (Date - 25 Jan 2026)
+
+this Keyword + Constructor Overloading + Encapsulation
+
+1. this keyword 
+-> this refers to current object of a class
+
+2. Why do we need this?
+-> When local variables (parameters) and instance variables have the same name.
+Without this, Java gets confused between instance variable and parameter.
+
+
+* Uses of this
+
+| Use                             | Example             |
+| ------------------------------- | ------------------- |
+| Refer instance variables        | `this.name = name;` |
+| Call current class method       | `this.display();`   |
+| Call current class constructor  | `this(10);`         |
+| Pass current object as argument | `someMethod(this);` |
+
+
+* Example — Calling Method Using this
+->
+class Demo {
+    void show() {
+        System.out.println("Hello");
+    }
+
+    void display() {
+        this.show();  // calling method
+    }
+}
+
+---------------------------------------------------------------------------------------------------------
+
+Constructor Overloading
+->
+Having encapsulation means using multiple constructors with different parameter lists
+Java decides which constructor to run based on arguments.
+
+
+
+eg->
+Constructor Chaining using this()
+
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        this("Unknown", 0);  // calls 2nd constructor
+    }
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+ENCAPSULATION 
+
+-> Encapsulation = Wrapping data + methods together and hiding data using private variables
+                                            OR
+-> Wrapping data (variables) and methods together in a class and restricting direct access using private.
+
+
+Why use Encapsulation?
+-> Security + Control over data
+
+Without Encapsulation
+eg -
+class Student {
+    String name;
+    int age;
+}
+
+Student s = new Student();
+s.age = -100;  // Invalid data but allowed 
+
+
+| Type               | How                   |
+| ------------------ | --------------------- |
+| Fully Encapsulated | All variables private |
+| Read-Only          | Only getters          |
+| Write-Only         | Only setters          |
+
+
+
+Real World Example  is Bank Account
+
+
+
+
