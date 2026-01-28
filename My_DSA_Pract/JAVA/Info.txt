@@ -470,3 +470,114 @@ class Dog extends Animal {
 }
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Day 7 : (Date - 28 Jan 2026)        //Same Day...!
+
+Polymorphism
+
+What is Polymorphism ?
+->
+    Poly = Many
+    Morph = forms
+
+-> Polymorphism means ONE thing behaving in MANY different ways
+
+
+
+Real-life example
+
+You =
+    Student in college
+    Son at home
+    Developer while coding
+
+Same person → different roles. That’s polymorphism.
+
+
+
+
+Types of Polymorphism
+
+
+| Type                          | Also Called        | Happens When                           |
+| ----------------------------- | ------------------ | -------------------------------------- |
+| **Compile-time Polymorphism** | Method Overloading | Same method name, different parameters |
+| **Runtime Polymorphism**      | Method Overriding  | Parent reference, child object         |
+
+
+
+
+
+Compile Time Polymorphism (Method Overloading)
+->
+eg-
+
+class Calculator{
+
+    int add(int a, int b){
+        return a + b;
+    }
+
+    double add(double a, double b){
+        return a + b;
+    }
+
+    int add(int a, int b, int c){
+        return a + b + c;
+    }
+}
+
+class Test{
+    public static void main(String args[]){
+        Calculator c = new Calculator();
+
+        System.out.println(c.add(2,3));        // int version
+        System.out.println(c.add(2.5,3.5));    // double version
+        System.out.println(c.add(1,2,3));      // 3-parameter version
+    }
+}
+
+
+
+
+
+Puntime Polymorphism (Method Overriding)
+->
+eg-
+
+class Animal{
+    void sound(){
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal{
+    @Override
+    void sound(){
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal{
+    @Override
+    void sound(){
+        System.out.println("Cat meows");
+    }
+}
+
+
+
+
+
+Overview
+
+| Feature              | Overloading  | Overriding |
+| -------------------- | ------------ | ---------- |
+| Polymorphism Type    | Compile-time | Runtime    |
+| Method Name          | Same         | Same       |
+| Parameters           | Different    | Same       |
+| Inheritance Required | ❌          | ✅         |
+| Decided When         | Compile Time | Runtime    |
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
