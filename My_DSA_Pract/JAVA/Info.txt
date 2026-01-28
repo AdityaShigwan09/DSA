@@ -342,5 +342,131 @@ s.age = -100;  // Invalid data but allowed
 Real World Example  is Bank Account
 
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Day 6 : (Date - 28 Jan 2026)
+
+Inheritance in Java
+
+What is Inheritance ?
+-> Inheritance allows one class to acquire the properties and behaviors of another class.
+
+-> Child class uses Parent class features
+
+It helps in:
+    Code reuse
+    Real-world modeling
+    Method extension
+
+eg-
+
+class Parent {
+    void show() {
+        System.out.println("Parent method");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Child method");
+    }
+}
 
 
+Type of Inheritance-
+
+| Type                      | Supported in Java? |
+| ------------------------- | ------------------ |
+| Single                    | ✅                  |
+| Multilevel                | ✅                  |
+| Hierarchical              | ✅                  |
+| Multiple (via classes)    | ❌                  |
+| Multiple (via interfaces) | ✅                  |
+
+
+1.Single Inheritace 
+-> One Parent(Base class) -> One Child(Derived Class)
+
+eg-
+class A{
+}
+class B extends A{
+}
+
+
+2.Multilevel Inheritance
+-> Grandparent class→ Parent class → Child class
+
+eg-
+class A{
+}
+class B extends A{
+}
+class C extends B{
+}
+
+
+3.Hierarchical Inheritace
+-> One Parent -> Many Children
+
+eg-
+Class A{
+}
+Class B extends A{
+}
+class C extends A{
+}
+
+4 Multiple Inheritance
+Many Parant -> One Child
+"Not Supported by Java Multiple Inheritace using class"
+
+eg-
+class A{
+}
+class B extends A{
+}
+class C extends A{
+}
+//Below class is Hypothetical (Not Allowed in java)
+class D extends B,C{
+
+}
+
+---------------------------------------------------------------------------------------------------------
+
+
+Super Keyword
+
+Used to refer to parent class
+
+
+| Use                     | Example        |
+| ----------------------- | -------------- |
+| Call parent variable    | `super.x`      |
+| Call parent method      | `super.show()` |
+| Call parent constructor | `super()`      |
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+Method Overriding (IMPORTANT)
+
+Child class provides its own version of parent method.
+
+
+eg- 
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
