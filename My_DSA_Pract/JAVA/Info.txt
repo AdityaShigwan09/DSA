@@ -581,3 +581,41 @@ Overview
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+Q Payment System 
+
+Parent class: Payment → method pay(double amount)
+
+Child classes:
+    CreditCardPayment
+    UPIPayment
+    CashPayment
+
+Each prints different payment processing message.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Day 8 : (Date - 29 Jan 2026)                                       
+
+What is Abstraction?
+-> Abstraction means showing only essential details and hiding internal implementation
+
+Real-life example:
+-> When you drive a bike, you use accelerator, brake, clutch — you don’t know the engine mechanism.
+
+
+How Java Achieves Abstraction?
+->
+    1.Abstract Class
+    2.Interface
+
+
+Rules in Abstraction:
+
+    Declared using abstract keyword
+    Can have abstract methods (no body)
+    Can have normal methods (with body)
+    Cannot create object of abstract class
+
+
+
