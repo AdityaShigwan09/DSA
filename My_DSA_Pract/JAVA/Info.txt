@@ -576,7 +576,7 @@ Overview
 | Polymorphism Type    | Compile-time | Runtime    |
 | Method Name          | Same         | Same       |
 | Parameters           | Different    | Same       |
-| Inheritance Required | ❌          | ✅         |
+| Inheritance Required | No           | Yes        |
 | Decided When         | Compile Time | Runtime    |
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -597,6 +597,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Day 8 : (Date - 29 Jan 2026)                                       
 
+
+
 What is Abstraction?
 -> Abstraction means showing only essential details and hiding internal implementation
 
@@ -616,6 +618,191 @@ Rules in Abstraction:
     Can have abstract methods (no body)
     Can have normal methods (with body)
     Cannot create object of abstract class
+
+
+
+INTERFACE
+->
+An interface is 100% abstraction (almost).
+
+
+Rules:
+
+    All methods are public & abstract by default
+    Variables are public static final
+    A class uses implements keyword
+    Supports multiple inheritance
+
+eg-
+
+
+interface Animal {
+    void sound();
+}
+
+interface Pet {
+    void play();
+}
+
+class Dog implements Animal, Pet {
+
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public void play() {
+        System.out.println("Dog plays with ball");
+    }
+}
+
+class InterfaceDemo {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.play();
+    }
+}
+
+
+Key Features of Interface
+
+| Feature              | Explanation                                   |
+| -------------------- | --------------------------------------------- |
+| Methods              | By default **public & abstract**              |
+| Variables            | Always **public static final** (constants)    |
+| No constructor       | Cannot create object of interface             |
+| Multiple inheritance | A class can implement **multiple interfaces** |
+
+
+
+
+
+| Feature              | Abstract Class              | Interface       |
+| -------------------- | --------------------------- | --------------- |
+| Methods              | Abstract + Normal           | Mostly Abstract |
+| Variables            | Can have instance variables | Only constants  |
+| Constructor          | Yes                         | No              |
+| Multiple Inheritance | No                          | Yes             |
+| Keyword              | `extends`                   | `implements`    |
+
+--------------------------------------------------------------------------------------------------------
+
+* Final Keyword
+->
+final means you cannot change it anymore 
+It can be used with:
+    Variables
+        Syntax- 
+            final int x=10;
+            // x=21 (Not Allowed)
+    Methods
+        Syntax-
+            final void show(){
+
+            }
+    Classes
+        Syntax-
+            final class AD{
+
+            }
+
+    
+
+| Use of final   | Meaning              |
+| -------------- | -------------------- |
+| final variable | Value cannot change  |
+| final method   | Cannot be overridden |
+| final class    | Cannot be inherited  |
+
+
+
+Why Do We Use final?
+->
+    To make data constant
+    To prevent method modification
+    To stop inheritance (security / design control)
+    To make code more safe and predictable
+
+
+
+
+
+
+========================================================================================================
+=========================================================================================================
+
+                                                TEST
+
+Q2. Why is Java called platform independent but JVM platform dependent?
+->
+Java is platform independent Because the compiler or JRE 
+JVM is platform dependent Because it dependent on the .class file is going to execute on
+which OS Because of OS JVM is platform dependent
+
+Q3. What is the difference between method overloading and method overriding?
+Method Overloading Same Method Name Different Parameters,
+Method Overloading can done in same class 
+
+Method Overriding Same Method Name Same Parameters
+Method Overloading done in different class
+It uses @Override to overide the parent class method
+
+Q4. Can we create an object of an abstract class? Why?
+
+No
+When we create a abstract class we only Define the sturcture of of That class or a blueprint
+
+Q5. What happens if a child class does not implement all abstract methods?
+it will throw an error like abstract method is not implement in class 
+
+
+
+Q6. What is the role of the this keyword in Java? Give two uses.
+->
+this keyword is refer as current object
+two Uses
+this.method() - call the current class method
+this.variable - call the current class variable
+
+
+Q7. What is a constructor? Can a constructor be abstract?
+Constructor is block of code that execute when the class object is create using new keyword
+
+No ,we cant create the object of the abstract class so it dont have the Constructor with abstract
+
+Q8. Difference between class and object?
+class is consist of data members and properties
+class is a blueprint of object
+
+Object is create using new keyword of that class
+Object id a real time entity
+
+Q9. What is encapsulation? How is it achieved?
+Encapsulation Means it warpped the data in one class
+we use private keyword to data so it cannot manipluted by any other or can gained direct to that private 
+data variable
+
+Q10. What is inheritance? Name its types supported in Java.
+
+Inheritace means Relational of parent class and child class
+child class can Derived data members and properties of their parent class 
+In child class we use super keyword to access the properties from parent class
+We use extends keyword to show the parent child Relational in java
+
+
+
+
+Why is this valid?
+Animal a = new Dog();
+
+But this is invalid?
+Dog d = new Animal();
+->
+    A parent reference can hold a child object, but a child reference cannot hold a parent object.
+
+
+========================================================================================================
+========================================================================================================
 
 
 
